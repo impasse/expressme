@@ -1,3 +1,4 @@
 # ExpressME
 
-## A NodeJS blog program based with express and mongodb,unfinish now.
+## 一个基于ExpressJS+MongoDB+...的个人博客程序。目前尚未写完=。=
+
