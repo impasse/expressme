@@ -1,4 +1,6 @@
 # ExpressME
 
-## һ������ExpressJS+MongoDB+...�ĸ��˲��ͳ���Ŀǰ��δд��=��=
+## 一个基于ExpressJS+MongoDB+...的个人博客程序。
+
+### 目前尚未写完=。=
 
