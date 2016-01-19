@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登陆</title>
+    <link rel="stylesheet" href="/css/material.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/material-icons.css">
+    <script src="/js/material.js"></script>
+    <style>
+        body{
+            background: lightpink;
+        }
+        h1 {
+            text-align: center;
+        }
+        
+        .vhcenter {
+            margin: 2rem auto;
+            width: 70%;
+            text-align: center;
+            min-height: 400px;
+            height: 100%;
+            padding: 4rem;
+            overflow: visible;
+            background: #eee;
+        }
+        @media(max-width:700px){
+            .vhcenter{
+                width: 90%;
+                padding: 1.5rem;
+            }
+            h1{
+                font-size:32px;
+            }
+        }
+        .vhcenter::before{
+            content: '';
+            position: absolute;
+            top: -3rem;
+            left:calc((100% - 1.5rem)/2);
+            border-style: solid;
+            border-width: 1.5rem;
+            border-color: transparent transparent #eee transparent;
+            width: 0;
+            height: 0;
+        }
+        
+        .mdl-textfield {
+            width: 80%;
+            margin-top: 1rem;
+        }
+        
+        #submit {
+            margin-right: 4rem;
+        }
+        
+        #btns {
+            padding-top: 6rem;
+        }
+        i.material-icons{
+            font-size: inherit;
+            padding-right: .3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Blog</span>
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <h1>Control Center</h1>
+                <div class="mdl-card mdl-shadow--16dp vhcenter">
+                    <form method="POST" autocomplete="off">
+                        <div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                {% if msg %}
+                                <div class="msg">{{msg}}</div>
+                                {% endif %}
+                                <input class="mdl-textfield__input" type="text" id="username" name="username" required="required"/>
+                                <label class="mdl-textfield__label" for="username"><i class="material-icons">&#xE7FD;</i>用户名</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="password" id="password" name="password" required="required"/>
+                                <label class="mdl-textfield__label" for="password"><i class="material-icons">&#xE0DA;</i>密码</label>
+                            </div>
+                        </div>
+                        <p id="btns">
+                            <button id="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                登陆
+                            </button>
+                            <button id="reset" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect ">
+                                重置
+                            </button>
+                        </p>
+
+                    </form>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
