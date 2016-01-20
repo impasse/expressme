@@ -10,6 +10,12 @@ exports = module.exports = router=> {
             res.render('admin/option', data);
         });
     }).post((req,res)=>{
-
+        optionModel.findOneAndUpdate({},req.body,{
+            new:true,
+            upsert:true
+        }).exec((err,val)=>{
+            if(err)throw err;
+            res.redirect('../');
+        })
     });
 };
