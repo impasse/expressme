@@ -1,6 +1,3 @@
-/**
- * Created by shy on 2016/1/14.
- */
 "use strict";
 let optionModel = require('../../models/option');
 

@@ -6,7 +6,7 @@ let utils = require('../../utils');
 exports = module.exports = router => {
     router.get('/meta', (req, res)=> {
         cacher.getAllMetas().then(metas=> {
-            res.render('admin/meta', {metas: metas});
+            res.render('admin/meta_list', {metas: metas});
         }).catch(err=> {
             throw err;
         });
